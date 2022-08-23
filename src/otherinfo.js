@@ -1,6 +1,6 @@
 import React from "react";
 
-function otherinfo() {
+function Otherinfo() {
   return (
     <div className="P-info">
       <h1>Personal info</h1>
@@ -10,4 +10,4 @@ function otherinfo() {
   );
 }
 
-export default otherinfo;
+export default Otherinfo;
