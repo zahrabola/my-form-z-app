@@ -1,6 +1,6 @@
 import React from "react";
 
-function Signup() {
+function Signup({ formdata, setFormData }) {
   return (
     <div className="P-info">
       <h1>Sign Up</h1>

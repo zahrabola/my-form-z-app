@@ -1,11 +1,25 @@
 import React, { useState } from "react";
-import Otherinfo from "./otherinfo";
+import Otherinfo from "./Otherinfo";
 import Personalinfo from "./Personalinfo";
 import Signup from "./Signup";
 
 function Form() {
 
 const  [page, setPage] = useState(0);
+const [formdata, setFormData] = useState({
+  email: "",
+  password: "",
+  confirmPassword: "",
+  firstName: "",
+  lastName: "",
+  username: "",
+  nationality: "",
+  other: "",
+});
+
+
+
+
 const FormName =["Sign Up", "Personal Information", "Other Information"];
 
 const PageDispalay = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Otherinfo() {
+function Otherinfo({formdata, setFormData}) {
   return (
     <div className="P-info">
       <h1>Personal info</h1>
