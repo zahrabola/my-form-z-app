@@ -42,10 +42,11 @@ const PageDispalay = () => {
             width: page === 0 ? "33.3%" : page === 1 ? "66.6%" : "100%",
           }}
         ></div>
+        </div>
 
         <div className="form-container">
           <div className="header">{FormName[page]}</div>
-          <div className="body">{PageDispalay ()}</div>
+          <div className="body">{PageDispalay()}</div>
           <div className="footer">
             <button
               disabled={page === 0}
@@ -56,16 +57,22 @@ const PageDispalay = () => {
               Prev{" "}
             </button>
             <button
-              disabled={page === FormName.length - 1}
+              ///disabled={page === FormName.length - 1}
               onClick={() => {
-                setPage((currPage) => currPage + 1);
+                if (page === FormName.length - 1) {
+                  alert("Form Submitted");
+                  console.log(formdata);
+                } else {
+                  setPage((currPage) => currPage + 1);
+                }
               }}
             >
-              Next{" "}
+              {page === FormName.length - 1 ? "Submit" : "  Next"}
+    
             </button>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }
