@@ -14,7 +14,7 @@ const [formdata, setFormData] = useState({
   lastName: "",
   username: "",
   nationality: "",
-  other: "",
+  age: "",
 });
 
 
@@ -24,11 +24,11 @@ const FormName =["Sign Up", "Personal Information", "Other Information"];
 
 const PageDispalay = () => {
     if (page === 0){
-        return <Signup />;
+        return <Signup formdata={formdata} setFormData={setFormData}    />;
     } else if (page === 1) {
-        return <Personalinfo />;
+        return <Personalinfo formdata={formdata} setFormData={setFormData} />;
     } else {
-        return <Otherinfo/>;
+        return <Otherinfo formdata={formdata} setFormData={setFormData} />;
     }
 }
 
